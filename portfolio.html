@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mannat Garg | Portfolio</title>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Original+Surfer&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            font-family: "Poppins", sans-serif;
+            color: #673B00;
+            background:
+                linear-gradient(rgba(255, 247, 237, 0.72),
+                    rgba(255, 247, 237, 0.72)),
+                url("images/website back.jpg");
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+
+
+        #navigation {
+            width: 100%;
+            min-height: 65px;
+            background-color: #FFD099;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+
+            box-shadow: 0 3px 12px rgba(103, 59, 0, 0.12);
+        }
+
+        #navigation a {
+            position: relative;
+
+            color: #673B00;
+            text-decoration: none;
+
+            padding: 10px 18px;
+
+            font-size: 17px;
+            font-weight: 500;
+
+            transition: 0.3s ease;
+        }
+
+        #navigation a::after {
+            content: "";
+
+            position: absolute;
+            left: 50%;
+            bottom: 3px;
+
+            width: 0;
+            height: 2px;
+
+            background-color: #8B5E34;
+
+            transform: translateX(-50%);
+            transition: width 0.3s ease;
+        }
+
+        #navigation a:hover {
+            color: #8B5E34;
+        }
+
+        #navigation a:hover::after {
+            width: 65%;
+        }
+
+
+
+        main {
+            width: min(1100px, 92%);
+            margin: 45px auto;
+        }
+
+
+
+        #intro {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 55px;
+
+            padding: 50px;
+
+            background: rgba(255, 208, 153, 0.78);
+            border-radius: 25px;
+
+            box-shadow: 0 15px 35px rgba(103, 59, 0, 0.15);
+
+            backdrop-filter: blur(5px);
+        }
+
+        #profilepic {
+            width: 250px;
+            height: 250px;
+
+            object-fit: cover;
+
+            border: 8px solid #fff3e4;
+            border-radius: 50%;
+
+            box-shadow: 0 10px 25px rgba(103, 59, 0, 0.25);
+
+            transition: transform 0.4s ease;
+        }
+
+        #profilepic:hover {
+            transform: scale(1.04);
+        }
+
+        #details {
+            flex: 1;
+        }
+
+        #name {
+            margin-bottom: 15px;
+
+            font-family: "Original Surfer", cursive;
+
+            font-size: clamp(42px, 6vw, 70px);
+            line-height: 1.1;
+
+            color: #673B00;
+        }
+
+        #details h2 {
+            margin: 12px 0;
+
+            font-size: 18px;
+            font-weight: 500;
+
+            color: #795548;
+            text-align: left;
+        }
+
+
+        #info {
+            margin-top: 35px;
+
+            padding: 35px 45px;
+
+            background-color: rgba(255, 208, 153, 0.88);
+
+            border-left: 6px solid #B67D4E;
+            border-radius: 18px;
+
+            box-shadow: 0 10px 25px rgba(103, 59, 0, 0.12);
+        }
+
+        #info p {
+            font-family: "Original Surfer", cursive;
+
+            font-size: 18px;
+            line-height: 1.9;
+
+            color: #673B00;
+            text-align: justify;
+        }
+
+
+        #connect {
+            margin-top: 35px;
+            padding: 28px 35px;
+
+            background-color: #B67D4E;
+
+            border-radius: 18px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            box-shadow: 0 10px 25px rgba(103, 59, 0, 0.2);
+        }
+
+        #connect h2 {
+            color: white;
+            font-family: "Original Surfer", cursive;
+
+            font-size: 27px;
+            font-weight: 400;
+        }
+
+        #social {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+        }
+
+        #social a {
+            width: 48px;
+            height: 48px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            background-color: #FFE3BD;
+
+            border-radius: 50%;
+
+            transition: 0.3s ease;
+        }
+
+        #social img {
+            width: 27px;
+            height: 27px;
+
+            object-fit: contain;
+        }
+
+        #social a:hover {
+            background-color: white;
+            transform: translateY(-5px);
+
+            box-shadow: 0 7px 15px rgba(0, 0, 0, 0.18);
+        }
+
+
+        @media (max-width: 768px) {
+
+            #navigation {
+                flex-wrap: wrap;
+                padding: 10px;
+            }
+
+            #navigation a {
+                font-size: 15px;
+                padding: 8px 12px;
+            }
+
+            main {
+                width: 92%;
+                margin: 25px auto;
+            }
+
+            #intro {
+                flex-direction: column;
+                text-align: center;
+
+                padding: 35px 20px;
+
+                gap: 25px;
+            }
+
+            #profilepic {
+                width: 190px;
+                height: 190px;
+            }
+
+            #name {
+                font-size: 45px;
+            }
+
+            #details h2 {
+                font-size: 15px;
+                text-align: center;
+                line-height: 1.5;
+            }
+
+            #info {
+                padding: 25px 20px;
+            }
+
+            #info p {
+                font-size: 16px;
+                line-height: 1.75;
+                text-align: left;
+            }
+
+            #connect {
+                flex-direction: column;
+                gap: 20px;
+
+                padding: 25px 20px;
+            }
+
+            #connect h2 {
+                font-size: 23px;
+            }
+        }
+
+        @media (max-width: 450px) {
+
+            #profilepic {
+                width: 160px;
+                height: 160px;
+            }
+
+            #name {
+                font-size: 38px;
+            }
+
+            #details h2 {
+                font-size: 14px;
+            }
+
+            #social {
+                gap: 12px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <nav id="navigation">
+        <a href="portfolio.html">Home</a>
+        <a href="about.html">About Me</a>
+        <a href="contact.html">Contact Me</a>
+    </nav>
+
+    <main>
+
+
+        <section id="intro">
+
+            <img src="images/WhatsApp Image 2026-09-28 at 1.57.40 AM.jpeg" id="profilepic"
+                alt="Portrait of Mannat Garg">
+
+            <div id="details">
+
+                <h1 id="name">
+                    Mannat Garg
+                </h1>
+
+                <h2>
+                    CS-AI | Scaler School of Technology '30
+                </h2>
+
+                <h2>
+                    BS in Data Science | IIT Madras '30
+                </h2>
+
+            </div>
+
+        </section>
+
+
+
+        <section id="info">
+
+            <p>
+                Hi! I’m Mannat Garg, a first-year undergraduate student pursuing
+                a dual degree in Computer Science and Artificial Intelligence
+                from Scaler School of Technology and Data Science from IIT Madras.
+
+                Originally from Chandigarh, I moved to Bangalore for college and
+                to experience a new environment. I’m passionate about coding,
+                technology, and web development, while also exploring my creative
+                side through photography and capturing moments around me.
+
+                College has given me the opportunity to explore new interests,
+                meet new people, and grow both technically and creatively.
+                I’m excited to keep learning, creating, and discovering where
+                this journey takes me.
+            </p>
+
+        </section>
+
+
+
+        <section id="connect">
+
+            <h2>
+                Let's Connect!
+            </h2>
+
+            <div id="social">
+
+                <a href="https://www.linkedin.com/in/mannat-garg-856b64284/" target="_blank" aria-label="LinkedIn">
+                    <img src="images/linkedIn_PNG7.png" alt="LinkedIn">
+                </a>
+
+                <a href="mailto:gargmannat2008@gmail.com" aria-label="Email">
+                    <img src="images/email-line-icon-png.webp" alt="Email">
+                </a>
+
+                <a href="https://www.instagram.com/_gargmannat?stkn=MWo5cnhpcmpiaG55cw%3D%3D&utm_source=qr"
+                    target="_blank" aria-label="Instagram">
+                    <img src="images/insta icon.webp" alt="Instagram">
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</body>
+
+</html>
